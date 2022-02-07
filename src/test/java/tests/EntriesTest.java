@@ -4,6 +4,7 @@ import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import utils.AllureUtils;
 //import utils.AllureUtils;
 
 @Log4j2
@@ -25,14 +26,14 @@ public class EntriesTest extends BaseTest{
                 .checkTitleCalendar()
                 .checkTitleSearch()
                 .checkTitleTags();
-//        AllureUtils.takeScreenshot(driver);
+        AllureUtils.takeScreenshot(driver);
         log.info("Opened welcome entry");
         entriesPage
                 .clickWelcomeEntries();
         log.info("Check open entry and check visibility tool bar button delete");
         entriesPage
                 .checkToolBarButtonDelete();
-//        AllureUtils.takeScreenshot(driver);
+        AllureUtils.takeScreenshot(driver);
 
     }
 

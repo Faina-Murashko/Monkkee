@@ -4,6 +4,7 @@ import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import utils.AllureUtils;
 //import utils.AllureUtils;
 
 @Log4j2
@@ -36,7 +37,7 @@ public class EntryesNewDataTest extends BaseTest {
                 .turnToolBar()
                 .clickOnButtonHomePage();
         log.info("Back to home page.");
-//        AllureUtils.takeScreenshot(driver);
+        AllureUtils.takeScreenshot(driver);
 
     }
 }

@@ -46,7 +46,7 @@ public class LoginTest extends BaseTest {
         loginPage
                 .errorMessage();
 
-//        AllureUtils.takeScreenshot(driver);
+        AllureUtils.takeScreenshot(driver);
 
     }
 
