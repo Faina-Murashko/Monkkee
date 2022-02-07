@@ -5,7 +5,8 @@ import lombok.extern.log4j.Log4j2;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import utils.AllureUtils;
-//import utils.AllureUtils;
+
+import static utils.AllureUtils.takeScreenshot;
 
 @Log4j2
 public class EntryesNewDataTest extends BaseTest {
@@ -32,12 +33,15 @@ public class EntryesNewDataTest extends BaseTest {
                 .choiceBoltFontOnOff()
                 .visibilityFullToolBar()
                 .centeredText()
-                .inputMessageInNewEntries()
+                .inputMessageTitle()
+                .choiceBoltFontOnOff()
+                .textAlightLeft()
+                .inputFullMessage()
                 .clickSaveEntries()
                 .turnToolBar()
                 .clickOnButtonHomePage();
         log.info("Back to home page.");
-        AllureUtils.takeScreenshot(driver);
+        takeScreenshot(driver);
 
     }
 }
