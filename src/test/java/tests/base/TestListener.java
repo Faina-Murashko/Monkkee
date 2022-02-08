@@ -10,6 +10,6 @@ public class TestListener implements ITestListener {
     public void onTestFailure(ITestResult result) {
         WebDriver driver = (WebDriver) result.getTestContext().getAttribute("driver");
         System.out.printf("Test %s failed", result.getName());
-        AllureUtils.takeScreenshot(driver);
+        AllureUtils.takeScreenshot();
     }
 }

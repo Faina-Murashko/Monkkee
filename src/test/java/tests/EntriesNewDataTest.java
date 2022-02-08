@@ -9,7 +9,7 @@ import utils.AllureUtils;
 import static utils.AllureUtils.takeScreenshot;
 
 @Log4j2
-public class EntryesNewDataTest extends BaseTest {
+public class EntriesNewDataTest extends BaseTest {
     @Step("Input Variable email and password.")
     @Test(description = "Variable login in monkkee.")
     public void LogIn() {
@@ -39,9 +39,11 @@ public class EntryesNewDataTest extends BaseTest {
                 .inputFullMessage()
                 .clickSaveEntries()
                 .turnToolBar()
+                .inputTagName()
+                .clickButtonTags()
                 .clickOnButtonHomePage();
         log.info("Back to home page.");
-        takeScreenshot(driver);
+        AllureUtils.takeScreenshot();
 
     }
 }

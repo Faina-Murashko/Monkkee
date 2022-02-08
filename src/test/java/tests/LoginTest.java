@@ -25,8 +25,7 @@ public class LoginTest extends BaseTest {
                 .inputVariableEmail()
                 .inputVariablePassword()
                 .submitFormLogin();
-        AllureUtils.takeScreenshot(driver);
-
+        AllureUtils.takeScreenshot();
     }
 
     @Step("Input for invalid data entry.")
@@ -46,7 +45,7 @@ public class LoginTest extends BaseTest {
         loginPage
                 .errorMessage();
 
-        AllureUtils.takeScreenshot(driver);
+        AllureUtils.takeScreenshot();
 
     }
 
@@ -66,7 +65,7 @@ public class LoginTest extends BaseTest {
         loginPage
                 .fullErrorDataMessage();
 
-//        AllureUtils.takeScreenshot(driver);
+        AllureUtils.takeScreenshot();
 
     }
 

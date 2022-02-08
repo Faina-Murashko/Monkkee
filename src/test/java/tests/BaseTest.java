@@ -21,7 +21,7 @@ public class BaseTest {
     LoginPage loginPage;
     EntriesPage entriesPage;
     EntriesNewDataPage entriesNewDataPage;
-    WebDriver driver;
+//    WebDriver driver;
 
     @BeforeClass
     public void setUp() throws InterruptedException {
@@ -31,6 +31,7 @@ public class BaseTest {
         Configuration.browser = "chrome";
         Configuration.savePageSource = false;
         Configuration.timeout = 10000;
+        Configuration.browserSize = "1920x1080";
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
 
