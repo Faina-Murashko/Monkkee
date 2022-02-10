@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
+import pages.EntriesNewDataImgPage;
 import pages.EntriesNewDataPage;
 import pages.EntriesPage;
 import pages.LoginPage;
@@ -21,13 +22,13 @@ public class BaseTest {
     LoginPage loginPage;
     EntriesPage entriesPage;
     EntriesNewDataPage entriesNewDataPage;
-//    WebDriver driver;
-
+    EntriesNewDataImgPage entriesNewDataImgPage;
     @BeforeClass
     public void setUp() throws InterruptedException {
         loginPage = new LoginPage();
         entriesPage = new EntriesPage();
         entriesNewDataPage = new EntriesNewDataPage();
+        entriesNewDataImgPage = new EntriesNewDataImgPage();
         Configuration.browser = "chrome";
         Configuration.savePageSource = false;
         Configuration.timeout = 10000;

@@ -17,9 +17,9 @@ public class EntriesNewDataPage extends BasePage{
     public static final By FULL_REVEAL_TOOL_BAR = By.xpath("//*[@class='cke_toolbar cke_toolbar_last']//span[@class='cke_toolgroup']/a/span[@class='cke_button_icon cke_button__show_complete_toolbar_icon']");
     public static final By CENTERED_TEXT_TOOL_BAR = By.xpath("//*[@class='cke_toolgroup']//span[@class='cke_button_icon cke_button__justifycenter_icon']");
     public static final By TURN_TOOL_BAR = By.xpath("//*[@class='cke_toolbox']//*[@id='cke_48']");
-    public static final By TEXT_ALIGHT_LEFT = By.xpath("//div[@class='cke_inner']//span[@class='cke_button_icon cke_button__justifyleft_icon']");
+    public static final By TEXT_ALIGN_LEFT = By.xpath("//div[@class='cke_inner']//span[@class='cke_button_icon cke_button__justifyleft_icon']");
     public static final By INPUT_NEW_TAG = By.xpath("//div[@class='sidebar']//*[@id='new-tag']");
-    public static final By BUTTON_OK_TAG = By.xpath("//div[@class='input-group']//div[@class='btn-text-content']");
+//    public static final By BUTTON_OK_TAG = By.xpath("//div[@class='input-group']//div[@class='btn-text-content']");
 
 
     @Step("Click on the button to create a new note.")
@@ -82,8 +82,8 @@ public class EntriesNewDataPage extends BasePage{
         return new EntriesNewDataPage();
     }
     @Step("Choosing text layout on the left.")
-    public EntriesNewDataPage textAlightLeft(){
-        $(TEXT_ALIGHT_LEFT).click();
+    public EntriesNewDataPage textAlignLeft(){
+        $(TEXT_ALIGN_LEFT).click();
         return new EntriesNewDataPage();
     }
     @Step("Input tag name for entries.")
@@ -93,7 +93,7 @@ public class EntriesNewDataPage extends BasePage{
     }
     @Step("Submit name tag.")
     public EntriesNewDataPage clickButtonTags(){
-        $(INPUT_NEW_TAG).click();
+        $(INPUT_NEW_TAG).submit();
         return new EntriesNewDataPage();
     }
 }

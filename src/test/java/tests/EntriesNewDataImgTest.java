@@ -4,12 +4,8 @@ import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import utils.AllureUtils;
-
-import static utils.AllureUtils.takeScreenshot;
-
 @Log4j2
-public class EntriesNewDataTest extends BaseTest {
+public class EntriesNewDataImgTest extends BaseTest {
     @Step("Input Variable email and password.")
     @Test(description = "Variable login in monkkee.")
     public void LogIn() {
@@ -27,23 +23,29 @@ public class EntriesNewDataTest extends BaseTest {
                 .clickOnCreateNewEntries();
         log.info("Check tool bar visibility.");
         entriesNewDataPage
-                .checkToolBar();
-        log.info("Input data title in new entry.");
-        entriesNewDataPage
                 .choiceBoltFontOnOff()
                 .visibilityFullToolBar()
-                .centeredText()
-                .inputMessageTitle()
                 .choiceBoltFontOnOff()
-                .textAlignLeft()
-                .inputFullMessage()
+                .centeredText();
+        log.info("Add parameters for entries with img");
+        entriesNewDataImgPage
+                .inputTitleText()
+                .clickImgButton()
+                .propertiesCheckVisible()
+                .inputUrlImg()
+                .choiceImgAlignCenter()
+                .submitImgProperties();
+        log.info("Save entries");
+        entriesNewDataPage
                 .clickSaveEntries()
-                .turnToolBar()
-                .inputTagName()
-                .clickButtonTags()
+                .turnToolBar();
+        log.info("Adding tag name");
+        entriesNewDataImgPage
+                .addTagsName()
+                .submitTagName();
+        log.info("return to home page");
+        entriesNewDataPage
                 .clickOnButtonHomePage();
-        log.info("Back to home page.");
-        AllureUtils.takeScreenshot();
 
     }
 }
