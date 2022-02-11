@@ -15,7 +15,7 @@ public class LoginPage extends BasePage {
     public static final By ERROR_MESSAGE_DATA_EMAIL = By.xpath("//div[@id='main']/div[@class='ng-scope']/div[2]//form/div[2]/div[@class='col-sm-9']/div[@class='help-block ng-binding']");
     public static final By ERROR_MESSAGE_DATA_PASSWORD = By.xpath("//div[@id='main']/div[@class='ng-scope']/div[2]//form/div[3]/div[@class='col-sm-9']/div[@class='help-block ng-binding']");
 
-    public static LoginPage openLoginPage() {
+    public LoginPage openLoginPage() {
         open("https://my.monkkee.com/#/");
         return new LoginPage();
 

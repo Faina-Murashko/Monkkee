@@ -10,7 +10,7 @@ public class EntriesNewDataImgTest extends BaseTest {
     @Test(description = "Variable login in monkkee.")
     public void LogIn() {
         log.info("Logo visibility check.");
-        LoginPage
+        loginPage
                 .openLoginPage()
                 .imgLogo();
         log.info("Here we enter the correct user data.");
