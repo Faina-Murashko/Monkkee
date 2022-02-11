@@ -7,10 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
-import pages.EntriesNewDataImgPage;
-import pages.EntriesNewDataPage;
-import pages.EntriesPage;
-import pages.LoginPage;
+import pages.*;
 //import tests.base.TestListener;
 
 import java.util.concurrent.TimeUnit;
@@ -23,12 +20,14 @@ public class BaseTest {
     EntriesPage entriesPage;
     EntriesNewDataPage entriesNewDataPage;
     EntriesNewDataImgPage entriesNewDataImgPage;
+    EntriesSettingPage entriesSettingPage;
     @BeforeClass
     public void setUp() throws InterruptedException {
         loginPage = new LoginPage();
         entriesPage = new EntriesPage();
         entriesNewDataPage = new EntriesNewDataPage();
         entriesNewDataImgPage = new EntriesNewDataImgPage();
+        entriesSettingPage = new EntriesSettingPage();
         Configuration.browser = "chrome";
         Configuration.savePageSource = false;
         Configuration.timeout = 10000;

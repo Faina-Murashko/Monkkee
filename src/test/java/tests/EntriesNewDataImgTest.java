@@ -8,7 +8,7 @@ import pages.LoginPage;
 public class EntriesNewDataImgTest extends BaseTest {
     @Step("Input Variable email and password.")
     @Test(description = "Variable login in monkkee.")
-    public void LogIn() {
+    public void EntriesDataImage() {
         log.info("Logo visibility check.");
         loginPage
                 .openLoginPage()
