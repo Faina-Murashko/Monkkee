@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -16,7 +17,7 @@ public class LoginPage extends BasePage {
     public static final By ERROR_MESSAGE_DATA_PASSWORD = By.xpath("//div[@id='main']/div[@class='ng-scope']/div[2]//form/div[3]/div[@class='col-sm-9']/div[@class='help-block ng-binding']");
 
     public static LoginPage openLoginPage() {
-        open("//my.monkkee.com/#/");
+        open("https://my.monkkee.com/#/");
         return new LoginPage();
 
     }

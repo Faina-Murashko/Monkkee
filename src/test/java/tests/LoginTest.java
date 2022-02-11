@@ -53,7 +53,7 @@ public class LoginTest extends BaseTest {
     @Test(description = "Input Invalid email and password.")
     public void invalidLogInData() {
         log.info("Logo visibility check.");
-        loginPage
+        LoginPage
                 .openLoginPage()
                 .imgLogo();
         log.info("Here we enter invalid email and password");
