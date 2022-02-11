@@ -15,7 +15,7 @@ public class EntriesTest extends BaseTest{
         log.info("Logo visibility check.");
         loginPage
                 .openLoginPage()
-                .imgLogo();
+                .imgLogoVisible();
         log.info("Here we enter the correct user data.");
         loginPage
                 .inputVariableEmail()

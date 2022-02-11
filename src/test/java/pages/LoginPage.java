@@ -10,7 +10,7 @@ public class LoginPage extends BasePage {
     public static final By INPUT_EMAIL = By.xpath("//input[@id='login']");
     public static final By INPUT_PASSWORD = By.xpath("//input[@id='password']");
     public static final By SUBMIT_FORM_LOGIN = By.xpath("//div[@class='btn-text-content']");
-    public static final By IMG_LOGO = By.xpath("//a/img[@alt='Logo']");
+    public static final By IMG_LOGO = By.xpath("//div[@class='logo']//img[@alt='Logo']");
     public static final By ERROR_MESSAGE = By.xpath("//div[@id='main']//div[@class='login-wrapper']//div[@class='alert alert-danger']");
     public static final By ERROR_MESSAGE_DATA_EMAIL = By.xpath("//div[@id='main']/div[@class='ng-scope']/div[2]//form/div[2]/div[@class='col-sm-9']/div[@class='help-block ng-binding']");
     public static final By ERROR_MESSAGE_DATA_PASSWORD = By.xpath("//div[@id='main']/div[@class='ng-scope']/div[2]//form/div[3]/div[@class='col-sm-9']/div[@class='help-block ng-binding']");
@@ -36,7 +36,7 @@ public class LoginPage extends BasePage {
         return new LoginPage();
     }
 
-    public LoginPage imgLogo(){
+    public LoginPage imgLogoVisible(){
         $(IMG_LOGO).shouldBe(Condition.visible);
         return new LoginPage();
     }
