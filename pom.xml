@@ -13,14 +13,13 @@
         <maven.compiler.target>11</maven.compiler.target>
         <testing.version>7.1.0</testing.version>
         <selenium.version>4.1.2</selenium.version>
-        <webdrivermanager.version>5.0.0</webdrivermanager.version>
+        <webdrivermanager.version>5.0.3</webdrivermanager.version>
         <aspectjweaver.version>1.9.6</aspectjweaver.version>
         <allure-maven.version>2.10.0</allure-maven.version>
         <allure-testng.version>2.13.9</allure-testng.version>
         <log4j-core>2.14.1</log4j-core>
         <jackson-dataformat-yaml>2.12.3</jackson-dataformat-yaml>
         <lombok>1.18.22</lombok>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     </properties>
     <build>
@@ -34,7 +33,6 @@
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectjweaver.version}/aspectjweaver-${aspectjweaver.version}.jar
                         -Xmx256m
                     </argLine>
-                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
 
