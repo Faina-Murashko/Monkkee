@@ -13,7 +13,8 @@ import utils.AllureUtils;
 public class LoginTest extends BaseTest {
 
     @Step("Input Variable email and password.")
-    @Test(description = "Variable login in monkkee.")
+    @Test (priority = 3,description = "Variable login in monkkee.")
+
     public void LogIn() {
         log.info("Logo visibility check.");
         loginPage
@@ -28,7 +29,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Step("Input for invalid data entry.")
-    @Test(description = "Input Variable email and invalid password")
+    @Test(priority =1,description = "Input Variable email and invalid password")
     public void invalidLogInPassword() {
 
         log.info("Logo visibility check.");
@@ -49,7 +50,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Step("Input for invalid email and password.")
-    @Test(description = "Input Invalid email and password.")
+    @Test(priority = 2,description = "Input Invalid email and password.")
     public void invalidLogInData() {
         log.info("Logo visibility check.");
         loginPage
