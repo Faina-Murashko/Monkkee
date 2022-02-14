@@ -30,13 +30,10 @@ jobs:
 
       - store_test_results:
           path: target/surefire-reports/junitreports
-            - store_artifacts:
-                path: target/surefire-reports
-                #destination: report/testng-results
-            - store_artifacts:
-                path: target/allure-results
-                #destination: report/allure-results
-
+          when: always
+      - store_artifacts:
+          path: target/site/allure-maven-plugin/
+          when: always
 workflows:
   version: 2
   commit:
