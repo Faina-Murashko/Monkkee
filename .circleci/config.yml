@@ -26,11 +26,19 @@ jobs:
           name: Generate allure report
           command: mvn allure:report
           when: always
+
+
       - store_test_results:
           path: target/surefire-reports/junitreports
-          when: always
-      - store_artifacts:
-          path: target/site/allure-maven-plugin/
+            - store_artifacts:
+                path: target/surefire-reports
+                #destination: report/testng-results
+            - store_artifacts:
+                path: target/allure-results
+                #destination: report/allure-results
+            - store_artifacts:
+                path: target/site/allure-maven-plugin
+                destination: Allure
 workflows:
   version: 2
   commit:
