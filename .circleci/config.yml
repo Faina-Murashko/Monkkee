@@ -2,7 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 # https://circleci.com/docs/2.0/browser-testing/#selenium
-version: 2.1
+version: 2
 jobs:
   ui-tests:
     docker:
@@ -26,14 +26,11 @@ jobs:
           name: Generate allure report
           command: mvn allure:report
           when: always
-
-
       - store_test_results:
           path: target/surefire-reports/junitreports
           when: always
       - store_artifacts:
           path: target/site/allure-maven-plugin/
-          when: always
 workflows:
   version: 2
   commit:
