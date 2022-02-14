@@ -33,9 +33,7 @@ jobs:
             - store_artifacts:
                 path: target/surefire-reports
                 #destination: report/testng-results
-            - store_artifacts:
-                path: target/allure-results
-                #destination: report/allure-results
+
             - store_artifacts:
                 path: target/site/allure-maven-plugin
                 destination: Allure
