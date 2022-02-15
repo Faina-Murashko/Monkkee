@@ -22,13 +22,14 @@
         <jackson-dataformat-yaml>2.12.3</jackson-dataformat-yaml>
         <lombok>1.18.22</lombok>
 
+
     </properties>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.12.4</version>
+                <version>3.0.0-M5</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <argLine>
@@ -40,6 +41,7 @@
                         <forkCount>3</forkCount>
                         <reuseForks>true</reuseForks>
                     </suiteXmlFiles>
+
                 </configuration>
 
 
