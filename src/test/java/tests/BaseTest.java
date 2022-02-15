@@ -32,14 +32,15 @@ public class BaseTest {
         Configuration.savePageSource = false;
         Configuration.timeout = 10000;
         Configuration.browserSize = "1920x1080";
+        Configuration.browserPosition = "0x0";
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
 
 
     }
 
-//    @AfterClass(alwaysRun = true)
-//    public void tearDown() {
-//        getWebDriver().quit();
-//    }
+    @AfterClass(alwaysRun = true)
+    public void tearDown() {
+        getWebDriver().quit();
+    }
 }

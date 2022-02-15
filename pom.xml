@@ -37,6 +37,8 @@
                     </argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                        <forkCount>3</forkCount>
+                        <reuseForks>true</reuseForks>
                     </suiteXmlFiles>
                 </configuration>
 
