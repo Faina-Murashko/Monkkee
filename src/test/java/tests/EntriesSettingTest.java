@@ -27,7 +27,10 @@ public class EntriesSettingTest extends BaseTest {
         log.info("Click on setting button and opened page");
         entriesSettingPage
                 .clickSettingButton()
-                .settingTitleShouldBeVisible();
+                .settingTitleShouldBeVisible()
+                .clickButtonTimeOut();
+//                .titleShouldBeVisible();
+////                .choiceTimeOut();
 
     }
 }
