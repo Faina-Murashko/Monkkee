@@ -4,8 +4,9 @@
 _________________________________________________________________________________________________________________
 #Login Page
 *Invalid password*
-<li>Open Page 
-"https://www.saucedemo.com/"
+<li>Open Page;
+
+"https://my.monkkee.com/#/"
 <li>We check that we are on the right page;
 <li>Entering a valid email;
 <li>Entering an incorrect password;
@@ -14,7 +15,9 @@ ________________________________________________________________________________
 ______________________________________________
 
 *Invalid data input*
-<li>Open Page "https://my.monkkee.com/#/";
+<li>Open Page;
+
+"https://my.monkkee.com/#/"
 <li>We check that we are on the right page;
 <li>Entering an incorrect email;
 <li>Entering an incorrect password;
@@ -24,7 +27,9 @@ ______________________________________________
 
 
 *Input validation email and password*
-<li>Open Page "https://my.monkkee.com/#/";
+<li>Open Page;
+
+"https://my.monkkee.com/#/"
 <li>We check that we are on the right page;
 <li>Entering a valid email;
 <li>Entering a valid password;
