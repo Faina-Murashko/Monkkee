@@ -3,7 +3,7 @@
 <a href='https://hostingkartinok.com/show-image.php?id=4751a3fc8d477b12abd661b559722f27' title='photo share'><img src='https://s1.hostingkartinok.com/uploads/thumbs/2022/02/4751a3fc8d477b12abd661b559722f27.png' alt='Yes' /></a>
 
 _________________________________________________________________________________________________________________
-#Login Page:
+#*Login Page:*
 *"Invalid password"*
 <li>Open Page;
 
@@ -40,7 +40,8 @@ ______________________________________________
 
 ______________________________________________
 
-#Entries Page:
+<h1>Entries Page:</h1> 
+
 <li>Login;
 <li>Checking for title search;
 <li>Checking for availability of title calendar;
@@ -50,7 +51,7 @@ ______________________________________________
 
 _____________________________________________
 
-#Entries New Data Page:
+<h1>Entries New Data Page:</h1>
 <li>Login;
 <li>Created new entries;
 <li>Check tool bar visibility;
@@ -61,7 +62,7 @@ _____________________________________________
 
 _____________________________________________
 
-#Entries New Data Img Page:
+<h1>Entries New Data Img Page:</h1>
 <li>Login;
 <li>Created new entries;
 <li>Check tool bar visibility
@@ -74,7 +75,7 @@ _____________________________________________
 
 _____________________________________________
 
-#Setting Page:
+<h1>Setting Page:</h1>
 <li>Login;
 <li>Open Setting Page;
 <li>Settings title should be visible:
@@ -99,7 +100,7 @@ Delete Account;
 
 _____________________________________________
 
-#Home Page:
+<h1>Home Page:</h1>
 <li>Login;
 <li>Opened home page 
 

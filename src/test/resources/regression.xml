@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" name="Test suite" parallel="tests">
+<suite thread-count="5" name="Test suite" parallel="tests">
 
 
 
@@ -12,7 +12,7 @@
         </classes>
     </test>
     <test name="test 2">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="opera"/>
         <classes>
             <class name="tests.EntriesTest"/>
 
