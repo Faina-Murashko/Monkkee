@@ -19,6 +19,7 @@ public class EntriesNewDataImgTest extends BaseTest {
                 .inputVariablePassword()
                 .submitFormLogin();
         log.info("Click on button create new entry.");
+
         entriesNewDataPage
                 .clickOnCreateNewEntries();
         log.info("Check tool bar visibility.");

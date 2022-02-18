@@ -77,9 +77,49 @@ _____________________________________________
 #Setting Page:
 <li>Login;
 <li>Open Setting Page;
-<li>
-<li>
-<li>
-<li>
-<li>
+<li>Settings title should be visible:
+Email; 
+
+Password; 
+
+LoginAlias, 
+
+TimeOut, 
+
+Editor, 
+
+Export, 
+
+Donations, 
+
+Delete Account;
+<li>Opened inactivity timeout;
+<li>Select new standby setting;
+<li>Back to entries page;
+
+_____________________________________________
+
+#Home Page:
+<li>Login;
+<li>Opened home page 
+
+"https://www.monkkee.com/en/"
+<li>Check title home page visibility;
+<li>Check button Sign Up visible and click;
+<li>Check title registration visible in sign up;
+<li>Check button to my account and click;
+<li>Back to home page
+<li>Title should be visible:
+
+Features;
+
+Security;
+
+Donations;
+
+Team;
+
+_____________________________________________
+
+
 

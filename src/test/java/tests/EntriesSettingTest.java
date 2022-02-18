@@ -45,6 +45,7 @@ public class EntriesSettingTest extends BaseTest {
         entriesSettingPage
                 .settingWaitOpen()
                 .settingWait()
+                .settingAlertMessageVisible()
                 .settingWaitSubmit();
 
 

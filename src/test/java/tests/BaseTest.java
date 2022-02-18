@@ -21,6 +21,7 @@ public class BaseTest {
     EntriesNewDataPage entriesNewDataPage;
     EntriesNewDataImgPage entriesNewDataImgPage;
     EntriesSettingPage entriesSettingPage;
+    HomePage homePage;
     @BeforeClass
     public void setUp() throws InterruptedException {
         loginPage = new LoginPage();
@@ -28,12 +29,14 @@ public class BaseTest {
         entriesNewDataPage = new EntriesNewDataPage();
         entriesNewDataImgPage = new EntriesNewDataImgPage();
         entriesSettingPage = new EntriesSettingPage();
+        homePage = new HomePage();
         Configuration.browser = "chrome";
         Configuration.savePageSource = false;
         Configuration.timeout = 10000;
         Configuration.browserSize = "1920x1080";
         Configuration.browserPosition = "0x0";
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-notifications");
         options.addArguments("start-maximized");
 
 

@@ -2,8 +2,10 @@ package pages;
 
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.webdriver;
 
 public class EntriesSettingPage extends BasePage{
     public static final By SETTING_BUTTON = By.xpath("//div[@class='ng-scope']/a[@class='user-menu-btn']");
@@ -18,6 +20,9 @@ public class EntriesSettingPage extends BasePage{
     public static final By EXPORT = By.xpath("//div[@id='settings-menu']//a[@href='#/settings/export']");
     public static final By WAIT_SETTING = By.xpath("//div[@id='settings-content']//select[@name='autoLogout']");
     public static final By SUBMIT_SETTING_WAIT = By.xpath("/html//div[@id='settings-content']//div[@class='btn-text-content']");
+    public static final By ALERT_MESSAGE = By.xpath("//div[@id='settings-content']//div[@class='alert alert-success']");
+    public static final By POP_UP_CANCEL = By.xpath("/html/body/div[7]//button[@class='btn btn-primary']");
+    public static final By POP_UP_HEADER = By.xpath("//div[@class='modal-header']");
 
     public EntriesSettingPage clickSettingButton(){
         $(SETTING_BUTTON).click();
@@ -69,11 +74,15 @@ public class EntriesSettingPage extends BasePage{
         return new EntriesSettingPage();
     }
     public EntriesSettingPage settingWait(){
-        $(WAIT_SETTING).selectOption("20 minutes");
+        $(WAIT_SETTING).selectOption("5 minutes");
         return new EntriesSettingPage();
     }
     public EntriesSettingPage settingWaitSubmit(){
         $(SUBMIT_SETTING_WAIT).submit();
+        return new EntriesSettingPage();
+    }
+    public EntriesSettingPage settingAlertMessageVisible(){
+        $(ALERT_MESSAGE).shouldBe(Condition.visible);
         return new EntriesSettingPage();
     }
 
