@@ -24,13 +24,31 @@ public class EntriesSettingTest extends BaseTest {
                 .checkTitleSearch()
                 .checkTitleTags();
         AllureUtils.takeScreenshot();
-        log.info("Click on setting button and opened page");
+        log.info("Click on setting button and opened page.");
+        log.info("Check setting visible.");
         entriesSettingPage
                 .clickSettingButton()
                 .settingTitleShouldBeVisible()
-                .clickButtonTimeOut();
-//                .titleShouldBeVisible();
-////                .choiceTimeOut();
+                .settingEmailShouldBeVisible()
+                .settingPasswordShouldBeVisible()
+                .settingLoginAliasShouldBeVisible()
+                .settingTimeOutShouldBeVisible()
+                .settingEditorShouldBeVisible()
+                .settingExportShouldBeVisible()
+                .settingDonationsShouldBeVisible()
+                .settingDeleteAccountShouldBeVisible();
+        AllureUtils.takeScreenshot();
+        log.info("Opened Inactivity timeout.");
+        entriesSettingPage
+                .settingTimeOutOpen();
+        log.info("Selecting the standby setting.");
+        entriesSettingPage
+                .settingWaitOpen()
+                .settingWait()
+                .settingWaitSubmit();
+
+
+
 
     }
 }
