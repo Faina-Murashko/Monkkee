@@ -12,7 +12,7 @@ import static utils.AllureUtils.takeScreenshot;
 public class EntriesNewDataTest extends BaseTest {
     @Step("Input Variable email and password.")
     @Test(description = "Variable login in monkkee.")
-    public void EntriesNewData() {
+    public void EntriesNewData() throws InterruptedException {
         log.info("Logo visibility check.");
         loginPage
                 .openLoginPage()

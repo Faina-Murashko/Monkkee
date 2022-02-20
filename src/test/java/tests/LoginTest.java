@@ -15,7 +15,7 @@ public class LoginTest extends BaseTest {
     @Step("Input Variable email and password.")
     @Test (priority = 3,description = "Variable login in monkkee.")
 
-    public void LogIn() {
+    public void LogIn() throws InterruptedException {
         log.info("Logo visibility check.");
         loginPage
                 .openLoginPage()
@@ -40,7 +40,7 @@ public class LoginTest extends BaseTest {
         loginPage
                 .inputVariableEmail()
                 .inputInvalidPassword()
-                .submitFormLogin();
+                .submitForm();
         log.info("Here we check error message should be visible");
         loginPage
                 .errorMessage();
@@ -51,7 +51,7 @@ public class LoginTest extends BaseTest {
 
     @Step("Input for invalid email and password.")
     @Test(priority = 2,description = "Input Invalid email and password.")
-    public void invalidLogInData() {
+    public void invalidLogInData()  {
         log.info("Logo visibility check.");
         loginPage
                 .openLoginPage()
@@ -60,7 +60,7 @@ public class LoginTest extends BaseTest {
         loginPage
                 .inputInvalidEmail()
                 .inputInvalidPassword()
-                .submitFormLogin();
+                .submitForm();
         log.info("Here we check full error message data user.");
         loginPage
                 .fullErrorDataMessage();

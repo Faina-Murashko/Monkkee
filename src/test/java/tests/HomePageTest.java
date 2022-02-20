@@ -9,7 +9,7 @@ public class HomePageTest extends BaseTest {
     WebDriver driver;
     @Step("Input Variable email and password.")
     @Test(description = "Variable login in monkkee.")
-    public void HomePage() {
+    public void HomePage() throws InterruptedException {
         log.info("Logo visibility check.");
         loginPage
                 .openLoginPage()

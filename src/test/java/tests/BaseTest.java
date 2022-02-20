@@ -12,6 +12,7 @@ import pages.*;
 
 import java.util.concurrent.TimeUnit;
 
+import static com.codeborne.selenide.Configuration.browser;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 //@Listeners(TestListener.class)
 public class BaseTest {
@@ -24,13 +25,20 @@ public class BaseTest {
     HomePage homePage;
     @BeforeClass
     public void setUp() throws InterruptedException {
+        if (browser.equals("chrome")) {
+            browser = "chrome";
+        } else if (browser.equals("firefox")) {
+            browser = "firefox";
+        } else if (browser.equals("edge")) {
+            browser = "edge";
+        }
         loginPage = new LoginPage();
         entriesPage = new EntriesPage();
         entriesNewDataPage = new EntriesNewDataPage();
         entriesNewDataImgPage = new EntriesNewDataImgPage();
         entriesSettingPage = new EntriesSettingPage();
         homePage = new HomePage();
-        Configuration.browser = "chrome";
+        browser = "chrome";
         Configuration.savePageSource = false;
         Configuration.timeout = 10000;
         Configuration.browserSize = "1920x1080";

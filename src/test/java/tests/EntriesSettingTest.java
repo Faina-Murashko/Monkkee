@@ -8,7 +8,7 @@ import utils.AllureUtils;
 public class EntriesSettingTest extends BaseTest {
     @Step("Input Variable email and password.")
     @Test(description = "Variable login in monkkee.")
-    public void SettingTest() {
+    public void SettingTest() throws InterruptedException {
         log.info("Logo visibility check.");
         loginPage
                 .openLoginPage()
