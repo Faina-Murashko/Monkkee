@@ -30,9 +30,7 @@ public class HomePageTest extends BaseTest {
         homePage
                 .openHomePage()
                 .buttonToMyAccountVisible()
-                .buttonToMyAccountClick();
-
-        homePage
+                .buttonToMyAccountClick()
                 .openHomePage()
                 .titleFeaturesVisible()
                 .titleSecurityVisible()

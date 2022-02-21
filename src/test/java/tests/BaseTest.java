@@ -23,6 +23,7 @@ public class BaseTest {
     EntriesNewDataImgPage entriesNewDataImgPage;
     EntriesSettingPage entriesSettingPage;
     HomePage homePage;
+    BlogPage blogPage;
     @BeforeClass
     public void setUp() throws InterruptedException {
         if (browser.equals("chrome")) {
@@ -38,6 +39,7 @@ public class BaseTest {
         entriesNewDataImgPage = new EntriesNewDataImgPage();
         entriesSettingPage = new EntriesSettingPage();
         homePage = new HomePage();
+        blogPage = new BlogPage();
         browser = "chrome";
         Configuration.savePageSource = false;
         Configuration.timeout = 10000;
