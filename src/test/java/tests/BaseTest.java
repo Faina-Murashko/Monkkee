@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Configuration.browser;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 //@Listeners(TestListener.class)
 public class BaseTest {
-
+    WebDriver driver;
     LoginPage loginPage;
     EntriesPage entriesPage;
     EntriesNewDataPage entriesNewDataPage;
@@ -24,6 +24,8 @@ public class BaseTest {
     EntriesSettingPage entriesSettingPage;
     HomePage homePage;
     BlogPage blogPage;
+    RegistrationPage registrationPage;
+    RegistrationModalPage registrationModalPage;
     @BeforeClass
     public void setUp() throws InterruptedException {
         if (browser.equals("chrome")) {
@@ -38,6 +40,8 @@ public class BaseTest {
         entriesNewDataPage = new EntriesNewDataPage();
         entriesNewDataImgPage = new EntriesNewDataImgPage();
         entriesSettingPage = new EntriesSettingPage();
+        registrationPage = new RegistrationPage();
+        registrationModalPage = new RegistrationModalPage();
         homePage = new HomePage();
         blogPage = new BlogPage();
         browser = "chrome";
