@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import utils.AllureUtils;
 @Log4j2
 public class EntriesSettingTest extends BaseTest {
-    @Step("Input Variable email and password.")
+    @Step("Test setting page.")
     @Test(description = "Variable login in monkkee.")
     public void SettingTest() throws InterruptedException {
         log.info("Logo visibility check.");
@@ -44,8 +44,9 @@ public class EntriesSettingTest extends BaseTest {
         log.info("Selecting the standby setting.");
         entriesSettingPage
                 .settingWaitOpen()
-                .settingWait()
-                .settingAlertMessageVisible()
+                .settingWaitFiveMinutes()
+                .settingWaitOpen()
+                .settingWaitTenMinutes()
                 .settingWaitSubmit();
 
 

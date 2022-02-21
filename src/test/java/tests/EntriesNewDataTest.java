@@ -10,7 +10,7 @@ import static utils.AllureUtils.takeScreenshot;
 
 @Log4j2
 public class EntriesNewDataTest extends BaseTest {
-    @Step("Input Variable email and password.")
+    @Step("Test new data entries page.")
     @Test(description = "Variable login in monkkee.")
     public void EntriesNewData() throws InterruptedException {
         log.info("Logo visibility check.");

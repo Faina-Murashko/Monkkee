@@ -9,7 +9,7 @@ import utils.AllureUtils;
 
 @Log4j2
 public class EntriesTest extends BaseTest{
-    @Step("Input Variable email and password.")
+    @Step("Test entries page.")
     @Test(description = "Variable login in monkkee.")
     public void LogIn() throws InterruptedException {
         log.info("Logo visibility check.");

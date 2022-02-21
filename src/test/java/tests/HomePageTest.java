@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 @Log4j2
 public class HomePageTest extends BaseTest {
     WebDriver driver;
-    @Step("Input Variable email and password.")
+    @Step("Test home page.")
     @Test(description = "Variable login in monkkee.")
     public void HomePage() throws InterruptedException {
         log.info("Logo visibility check.");

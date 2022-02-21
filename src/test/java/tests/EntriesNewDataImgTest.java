@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 @Log4j2
 public class EntriesNewDataImgTest extends BaseTest {
-    @Step("Input Variable email and password.")
+    @Step("Test new data img entries page.")
     @Test(description = "Variable login in monkkee.")
     public void EntriesDataImage() throws InterruptedException {
         log.info("Logo visibility check.");

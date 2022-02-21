@@ -73,8 +73,12 @@ public class EntriesSettingPage extends BasePage{
         $(WAIT_SETTING).click();
         return new EntriesSettingPage();
     }
-    public EntriesSettingPage settingWait(){
+    public EntriesSettingPage settingWaitFiveMinutes(){
         $(WAIT_SETTING).selectOption("5 minutes");
+        return new EntriesSettingPage();
+    }
+    public EntriesSettingPage settingWaitTenMinutes(){
+        $(WAIT_SETTING).selectOption("10 minutes");
         return new EntriesSettingPage();
     }
     public EntriesSettingPage settingWaitSubmit(){
