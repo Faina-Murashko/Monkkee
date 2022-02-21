@@ -46,8 +46,7 @@ public class RegistrationTest extends BaseTest{
         registrationPage
                 .invalidPassword()
                 .invalidConfirmPassword()
-                .passwordMessageVisible()
-                .errorMessageVisible();
+                .passwordMessageVisible();
         AllureUtils.takeScreenshot();
     }
     @Step("Open registration page and input different password.")
