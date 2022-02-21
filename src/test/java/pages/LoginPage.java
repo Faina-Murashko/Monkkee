@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -18,60 +19,62 @@ public class LoginPage extends BasePage {
     public static final By BUTTON_CANCEL_DONATION = By.xpath("//div[@class='donation-notice-buttons']/button/div[@class='btn-text-content']");
     public static final By TITLE_DONATION = By.xpath("//h1[.='Feed the monkkee']");
 
+    @Step("Open Login page.")
     public LoginPage openLoginPage() {
         open("https://my.monkkee.com/#/");
         return new LoginPage();
 
     }
 
-
+    @Step("Input Variable email.")
     public LoginPage inputVariableEmail() {
         $(INPUT_EMAIL).setValue(email);
         return new LoginPage();
     }
-
+    @Step("Input variable password.")
     public LoginPage inputVariablePassword() {
         $(INPUT_PASSWORD).setValue(password);
         return new LoginPage();
     }
-
+    @Step("Submit form. If after submit form opened page with donations we should be click on cancel button.")
     public LoginPage submitFormLogin() throws InterruptedException {
         $(SUBMIT_FORM_LOGIN).submit();
         Thread.sleep(3000);
         if ($(By.xpath("//h1[.='Feed the monkkee']")).is(Condition.visible)) {
             $(By.xpath("//div[@class='donation-notice-buttons']/button/div[@class='btn-text-content']")).click();
         }
-            $(By.xpath("//a[@id='create-entry']/i[@class='icon-plus']")).shouldBe(Condition.visible);
+        $(By.xpath("//a[@id='create-entry']/i[@class='icon-plus']")).shouldBe(Condition.visible);
 
         return new LoginPage();
     }
-
+    @Step("Img logo should be visible.")
     public LoginPage imgLogoVisible() {
         $(IMG_LOGO).shouldBe(Condition.visible);
         return new LoginPage();
     }
-
+    @Step("Input invalid password.")
     public LoginPage inputInvalidPassword() {
         $(INPUT_PASSWORD).setValue("password");
         return new LoginPage();
     }
-
+    @Step("Input invalid email.")
     public LoginPage inputInvalidEmail() {
         $(INPUT_EMAIL).setValue("12345456@aej.com");
         return new LoginPage();
     }
-
+    @Step("Check error message.")
     public LoginPage errorMessage() {
         $(ERROR_MESSAGE).shouldBe(Condition.visible);
         return new LoginPage();
     }
-
+    @Step("Check two errors messages")
     public LoginPage fullErrorDataMessage() {
         $(ERROR_MESSAGE_DATA_EMAIL).shouldBe(Condition.visible);
         $(ERROR_MESSAGE_DATA_PASSWORD).shouldBe(Condition.visible);
         return new LoginPage();
     }
-    public LoginPage submitForm(){
+    @Step("Submit form email and password for negativ test.")
+    public LoginPage submitForm() {
         $(SUBMIT_FORM_LOGIN).submit();
         return new LoginPage();
     }

@@ -18,15 +18,16 @@ public class BlogTest extends BaseTest{
                 .inputVariableEmail()
                 .inputVariablePassword()
                 .submitFormLogin();
-        AllureUtils.takeScreenshot();
         log.info("Opened Blog page and test entries about dog food.");
         blogPage
                 .openBlogPage()
                 .checkTitleBlogVisible()
-                .dogFoodLinkCheck()
+                .dogFoodLinkClick()
                 .dogFoodTitleCheckVisible()
                 .dogFoodLinkWiki()
                 .checkWikiTitleAboutDog();
+        AllureUtils.takeScreenshot();
+
     }
     @Step("Login => Open Blog Page and test entries about forget password." +
             "Variable email")
@@ -51,6 +52,8 @@ public class BlogTest extends BaseTest{
                 .titlePasswordReminderShouldHave()
                 .inputVariableEmailPasswordReminder()
                 .checkMessageAfterInputVariableEmail();
+        AllureUtils.takeScreenshot();
+
     }
     @Step("Login => Open Blog Page and test entries about forget password." +
             "invalid email.")
@@ -65,7 +68,6 @@ public class BlogTest extends BaseTest{
                 .inputVariableEmail()
                 .inputVariablePassword()
                 .submitFormLogin();
-        AllureUtils.takeScreenshot();
         log.info("Input invalid email and check error message");
         blogPage
                 .openBlogPage()
@@ -73,6 +75,8 @@ public class BlogTest extends BaseTest{
                 .linkPasswordReminder()
                 .inputInvalidEmailPasswordReminder()
                 .checkErrorMessageInvalidEmail();
+        AllureUtils.takeScreenshot();
+
 
 
     }

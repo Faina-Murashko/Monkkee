@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -24,70 +25,82 @@ public class EntriesSettingPage extends BasePage{
     public static final By POP_UP_CANCEL = By.xpath("/html/body/div[7]//button[@class='btn btn-primary']");
     public static final By POP_UP_HEADER = By.xpath("//div[@class='modal-header']");
 
+    @Step("Click on setting button and opened setting page.")
     public EntriesSettingPage clickSettingButton(){
         $(SETTING_BUTTON).click();
         return new EntriesSettingPage();
 
     }
+    @Step("In menu title setting email should be visible.")
     public EntriesSettingPage settingEmailShouldBeVisible(){
         $(EMAIL).shouldBe(Condition.visible);
         return new EntriesSettingPage();
     }
+    @Step("In menu title setting password should be visible.")
     public EntriesSettingPage settingPasswordShouldBeVisible(){
         $(PASSWORD).shouldBe(Condition.visible);
         return new EntriesSettingPage();
     }
+    @Step("In menu title setting login alias should be visible.")
     public EntriesSettingPage settingLoginAliasShouldBeVisible(){
         $(LOGIN_ALIAS).shouldBe(Condition.visible);
         return new EntriesSettingPage();
     }
+    @Step("In menu title setting time out should be visible.")
     public EntriesSettingPage settingTimeOutShouldBeVisible(){
         $(TIMEOUT).shouldBe(Condition.visible);
         return new EntriesSettingPage();
     }
+    @Step("Open setting time out.")
     public EntriesSettingPage settingTimeOutOpen(){
         $(TIMEOUT).click();
         return new EntriesSettingPage();
     }
+    @Step("In menu title setting editor should be visible.")
     public EntriesSettingPage settingEditorShouldBeVisible(){
         $(EDITOR).shouldBe(Condition.visible);
         return new EntriesSettingPage();
     }
+    @Step("In menu title setting donations should be visible.")
     public EntriesSettingPage settingDonationsShouldBeVisible(){
         $(DONATIONS).shouldBe(Condition.visible);
         return new EntriesSettingPage();
     }
+    @Step("In menu title setting delete account should be visible.")
     public EntriesSettingPage settingDeleteAccountShouldBeVisible(){
         $(DELETE_ACCOUNT).shouldBe(Condition.visible);
         return new EntriesSettingPage();
     }
+    @Step("Title setting should be visible.")
     public EntriesSettingPage settingTitleShouldBeVisible(){
         $(SETTING_TITLE).shouldBe(Condition.visible);
         return new EntriesSettingPage();
     }
+    @Step("In menu title setting export should be visible.")
     public EntriesSettingPage settingExportShouldBeVisible(){
         $(EXPORT).shouldBe(Condition.visible);
         return new EntriesSettingPage();
     }
+    @Step("Open setting time out.")
     public EntriesSettingPage settingWaitOpen(){
         $(WAIT_SETTING).click();
         return new EntriesSettingPage();
     }
+    @Step("Choice wait 5 minutes.")
     public EntriesSettingPage settingWaitFiveMinutes(){
         $(WAIT_SETTING).selectOption("5 minutes");
         return new EntriesSettingPage();
     }
+    @Step("Choise wait 10 minutes.")
     public EntriesSettingPage settingWaitTenMinutes(){
         $(WAIT_SETTING).selectOption("10 minutes");
         return new EntriesSettingPage();
     }
+    @Step("Submit form wait.")
     public EntriesSettingPage settingWaitSubmit(){
         $(SUBMIT_SETTING_WAIT).submit();
         return new EntriesSettingPage();
     }
-    public EntriesSettingPage settingAlertMessageVisible(){
-        $(ALERT_MESSAGE).shouldBe(Condition.visible);
-        return new EntriesSettingPage();
-    }
+
 
 }

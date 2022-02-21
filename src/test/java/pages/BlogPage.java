@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -20,61 +21,75 @@ public class BlogPage extends BasePage{
     public static final By AFTER_INPUT_EMAIL_MESSAGE = By.xpath("//div[@id='main']//p");
     public static final By ERROR_MESSAGE = By.xpath("//div[@class='help-block']");
 
+    @Step("Open blog page")
     public BlogPage openBlogPage(){
         open("https://www.monkkee.com/en/blog/");
         return new BlogPage();
     }
+    @Step("Check title in blog page should be visible.")
     public BlogPage checkTitleBlogVisible(){
         $(TITLE_BLOG).shouldBe(Condition.visible);
         return new BlogPage();
     }
-    public BlogPage dogFoodLinkCheck(){
+    @Step("Click on link about food dog.")
+    public BlogPage dogFoodLinkClick(){
         $(DOG_FOOD_LINK).click();
         return new BlogPage();
     }
+    @Step("Title in entries about food dog should be visible.")
     public BlogPage dogFoodTitleCheckVisible(){
         $(DOG_FOOD_TITLE).shouldBe(Condition.visible);
         return new BlogPage();
     }
+    @Step("Click on link about food dog and open Wikipedia.")
     public BlogPage dogFoodLinkWiki(){
         $(DOG_FOOD_LINK_WIKI).click();
         return new BlogPage();
     }
+    @Step("Title in wikipedia about food dog should be visible.")
     public BlogPage checkWikiTitleAboutDog(){
         $(WIKI_TITLE).shouldBe(Condition.visible);
         return new BlogPage();
     }
+    @Step("Title about forget password in blog page should be visible.")
     public BlogPage checkTitleForgetPasswordVisible(){
         $(FORGET_TITLE).shouldBe(Condition.visible);
         $(FORGET_TITLE).click();
         return new BlogPage();
     }
+    @Step("Img in entries about forget password should be visible.")
     public BlogPage imgPasswordPolicyVisibleCheck(){
         $(IMG_PASSWORD_POLICY).shouldBe(Condition.visible);
         return new BlogPage();
 
     }
+    @Step("Click on link password reminder.")
     public BlogPage linkPasswordReminder(){
         $(LINK_PASSWORD_REMINDER).shouldBe(Condition.visible).click();
         return new BlogPage();
     }
+    @Step("Title password remainder should be visible.")
     public BlogPage titlePasswordReminderShouldHave(){
         $(TITLE_PASSWORD_REMINDER).should(Condition.text("Send yourself a password reminder"));
         return new BlogPage();
     }
+    @Step("Input variable email.")
     public BlogPage inputVariableEmailPasswordReminder(){
         $(INPUT_EMAIL).setValue("motoekip.borisov@gmail.com").submit();
         return new BlogPage();
     }
+    @Step("Check message after input variable email.")
     public BlogPage checkMessageAfterInputVariableEmail(){
         $(AFTER_INPUT_EMAIL_MESSAGE)
                 .should(Condition.text("If the email address you entered is recognised, an email with a password hint will be sent to it."));
         return new BlogPage();
     }
+    @Step("Input invalid email.")
     public BlogPage inputInvalidEmailPasswordReminder(){
         $(INPUT_EMAIL).setValue("ajshvgbajenv").submit();
         return new BlogPage();
     }
+    @Step("Check error message after input invalid email.")
     public BlogPage checkErrorMessageInvalidEmail(){
         $(ERROR_MESSAGE)
                 .should(Condition.text("Not a valid email address"));
