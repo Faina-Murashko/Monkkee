@@ -13,11 +13,12 @@ public class Input {
     String label;
 
     public Input(WebDriver driver, String label){
+        log.info("Setting a locator to enter a value.");
         this.driver = driver;
         this.label = label;
     }
     public void write(String text) {
-        log.info("Write the text in the input field by the specified name ");
+        log.info("Write random email in the input");
         $(By.xpath(String.format(inputLocator, this.label))).sendKeys(text);
     }
 }
