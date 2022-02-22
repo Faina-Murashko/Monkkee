@@ -26,6 +26,8 @@ public class BaseTest {
     BlogPage blogPage;
     RegistrationPage registrationPage;
     RegistrationModalPage registrationModalPage;
+    TagsPage tagsPage;
+    TagsModalPage tagsModalPage;
     @BeforeClass
     public void setUp() throws InterruptedException {
         if (browser.equals("chrome")) {
@@ -42,6 +44,8 @@ public class BaseTest {
         entriesSettingPage = new EntriesSettingPage();
         registrationPage = new RegistrationPage();
         registrationModalPage = new RegistrationModalPage();
+        tagsModalPage = new TagsModalPage();
+        tagsPage = new TagsPage();
         homePage = new HomePage();
         blogPage = new BlogPage();
         browser = "chrome";

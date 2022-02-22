@@ -34,11 +34,7 @@ public class RegistrationPage extends BasePage{
         $(TITLE_REGISTRATION).shouldBe(Condition.visible);
         return new RegistrationPage();
     }
-//    @Step("Input faker variable email.")
-//    public RegistrationPage inputFakeEmail(){
-//        $(INPUT_EMAIL).sendKeys("Itakfule1942@einrot.com");
-//        return new RegistrationPage();
-//    }
+
     @Step("Input  variable password.")
     public RegistrationPage inputFakeVariablePassword(){
         $(INPUT_PASSWORD).sendKeys("12345678");
