@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class TagsPage extends BasePage {
     public static final By BUTTON_MANAGER_TAGS = By.xpath("//section[@id='tags']//a[text()='Manage tags']");
     public static final By TITLE_MANAGER_TAGS = By.xpath("//h1[.='Manage Tags']");
-    public static final By EDIT_TAGS = By.xpath("//div[@id='main']//table[@class='spaced-table']//a[@href='#/tags/220160/edit']/i[@class='icon-plus icon-white']");
+    public static final By EDIT_TAGS = By.xpath("//div[@id='main']//table[@class='spaced-table']/tbody/tr[2]/td[@class='buttons']/a[1]");
     public static final By TITLE_EDIT_TAGS = By.xpath("//h1[.='Edit Tag']");
     public static final By INPUT_TAG_NAME = By.xpath("//input[@id='tag']");
     public static final By BUTTON_SUBMIT = By.xpath("//button[@class='btn btn-primary']");
