@@ -39,7 +39,7 @@ public class TagsPage extends BasePage {
         $(INPUT_TAG_NAME).clear();
         return new TagsPage();
     }
-    @Step("Click on button sumbit setting page.")
+    @Step("Click on button submit setting page.")
     public TagsPage clickOnButtonSubmit(){
         $(BUTTON_SUBMIT).click();
         return new TagsPage();

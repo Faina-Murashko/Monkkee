@@ -32,7 +32,7 @@ public class TagsTest extends BaseTest {
         Tags tags = TagsFactory.get();
         tagsModalPage.createNewNameTags(tags);
         tagsPage
-                .buttonEditTags();
+                .clickOnButtonSubmit();
         AllureUtils.takeScreenshot();
 
     }

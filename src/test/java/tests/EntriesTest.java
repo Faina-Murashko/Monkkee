@@ -27,13 +27,7 @@ public class EntriesTest extends BaseTest{
                 .checkTitleSearch()
                 .checkTitleTags();
         AllureUtils.takeScreenshot();
-        log.info("Opened welcome entry");
-        entriesPage
-                .clickWelcomeEntries();
-        log.info("Check open entry and check visibility tool bar button delete");
-        entriesPage
-                .checkToolBarButtonDelete();
-        AllureUtils.takeScreenshot();
+
 
     }
 

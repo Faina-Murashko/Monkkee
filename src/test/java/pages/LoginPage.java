@@ -37,7 +37,7 @@ public class LoginPage extends BasePage {
         return new LoginPage();
     }
     @Step("Submit form. If after submit form opened page with donations we should be click on cancel button.")
-    public LoginPage submitFormLogin() throws InterruptedException {
+    public EntriesPage submitFormLogin() throws InterruptedException {
         $(SUBMIT_FORM_LOGIN).submit();
         Thread.sleep(3000);
         if ($(By.xpath("//h1[.='Feed the monkkee']")).is(Condition.visible)) {
@@ -45,7 +45,7 @@ public class LoginPage extends BasePage {
         }
         $(By.xpath("//a[@id='create-entry']/i[@class='icon-plus']")).shouldBe(Condition.visible);
 
-        return new LoginPage();
+        return new EntriesPage();
     }
     @Step("Img logo should be visible.")
     public LoginPage imgLogoVisible() {
