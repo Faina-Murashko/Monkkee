@@ -43,8 +43,6 @@ public class LoginPage extends BasePage {
         if ($(By.xpath("//h1[.='Feed the monkkee']")).is(Condition.visible)) {
             $(By.xpath("//div[@class='donation-notice-buttons']/button/div[@class='btn-text-content']")).click();
         }
-        $(By.xpath("//a[@id='create-entry']/i[@class='icon-plus']")).shouldBe(Condition.visible);
-
         return new EntriesPage();
     }
     @Step("Img logo should be visible.")

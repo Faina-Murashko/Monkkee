@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="5" name="Test suite" parallel="tests">
+<suite thread-count="4" name="Test suite" parallel="tests">
 
 
 
@@ -23,6 +23,14 @@
         <classes>
             <class name="tests.EntriesNewDataTest"/>
             <class name="tests.EntriesNewDataImgTest"/>
+
+        </classes>
+    </test>
+    <test name="test 4">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.DonationTest"/>
+            <class name="tests.RegistrationTest"/>
 
         </classes>
     </test>
