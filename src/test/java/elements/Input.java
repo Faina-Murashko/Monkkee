@@ -10,6 +10,9 @@ import static com.codeborne.selenide.Selenide.$;
 public class Input {
     String inputLocator = "/html//input[@id='registration_email']";
     String inputTagsLocator = "//input[@id='tag']";
+    String inputAuthorLocator = "//input[@id='author']";
+    String inputComment = "//textarea[@id='comment']";
+    String inputEmail = "//input[@id='email']";
     WebDriver driver;
     String label;
 
@@ -23,7 +26,19 @@ public class Input {
         $(By.xpath(String.format(inputLocator, this.label))).sendKeys(text);
     }
     public void writeTags(String text) {
-        log.info("Write random email in the input");
+        log.info("Write random tags in the input");
         $(By.xpath(String.format(inputTagsLocator, this.label))).sendKeys(text);
+    }
+    public void writeAuthorName(String text) {
+        log.info("Write random name in the input");
+        $(By.xpath(String.format(inputAuthorLocator, this.label))).sendKeys(text);
+    }
+    public void writeComment(String text) {
+        log.info("Write random comment in the input");
+        $(By.xpath(String.format(inputComment, this.label))).sendKeys(text);
+    }
+    public void writeinputEmail(String text) {
+        log.info("Write random email in the input");
+        $(By.xpath(String.format(inputEmail, this.label))).sendKeys(text);
     }
 }

@@ -1,21 +1,17 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import pages.*;
-//import tests.base.TestListener;
-
-import java.util.concurrent.TimeUnit;
-
 import static com.codeborne.selenide.Configuration.browser;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-//@Listeners(TestListener.class)
+@Log4j2
 public class BaseTest {
+
     WebDriver driver;
     LoginPage loginPage;
     EntriesPage entriesPage;
@@ -28,8 +24,11 @@ public class BaseTest {
     RegistrationModalPage registrationModalPage;
     TagsPage tagsPage;
     TagsModalPage tagsModalPage;
+    DonationPage donationPage;
+    AuthorModalPage authorModalPage;
     @BeforeClass
-    public void setUp() throws InterruptedException {
+    public void setUp() {
+        log.info("Open browser.");
         if (browser.equals("chrome")) {
             browser = "chrome";
         } else if (browser.equals("firefox")) {
@@ -44,7 +43,9 @@ public class BaseTest {
         entriesSettingPage = new EntriesSettingPage();
         registrationPage = new RegistrationPage();
         registrationModalPage = new RegistrationModalPage();
+        authorModalPage = new AuthorModalPage();
         tagsModalPage = new TagsModalPage();
+        donationPage = new DonationPage();
         tagsPage = new TagsPage();
         homePage = new HomePage();
         blogPage = new BlogPage();
@@ -62,6 +63,7 @@ public class BaseTest {
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {
+        log.info("Close browser.");
         getWebDriver().quit();
     }
 }
