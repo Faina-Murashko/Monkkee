@@ -78,22 +78,24 @@ _____________________________________________
 <h1>Setting Page:</h1>
 <li>Login;
 <li>Open Setting Page;
+
+"https://my.monkkee.com/#/settings/locale"
 <li>Settings title should be visible:
-Email; 
+1. Email; 
 
-Password; 
+2. Password; 
 
-LoginAlias, 
+3. LoginAlias, 
 
-TimeOut, 
+4. TimeOut, 
 
-Editor, 
+5. Editor, 
 
-Export, 
+6. Export, 
 
-Donations, 
+7. Donations, 
 
-Delete Account;
+8. Delete Account;
 <li>Opened inactivity timeout;
 <li>Select new standby setting;
 <li>Back to entries page;
@@ -112,15 +114,141 @@ _____________________________________________
 <li>Back to home page
 <li>Title should be visible:
 
-Features;
+1. Features;
 
-Security;
+2. Security;
 
-Donations;
+3. Donations;
 
-Team;
+4. Team;
+
+_____________________________________________
+
+<h1>Blog Page:</h1>
+<li>Open Blog page;
+
+"https://www.monkkee.com/en/blog/"
+<li>Check title blog;
+<li>Click food dog page blog;
+<li>Check title food dog page;
+<li>Click on link Wikipedia;
+<li>Check title in Wikipedia;
+
+
+_____________________________________________
+
+<h1>Contact page:</h1>
+<li>Open contact page;
+
+"https://www.monkkee.com/en/contact/"
+<li>Check title contact page;
+<li>Input invalid name;
+<li>Input invalid email;
+<li>Click on submit form contact;
+<li>Check error message invalid email;
+<li>Check error message submit privat policy;
 
 _____________________________________________
 
 
+<h1>Donation page:</h1>
+
+*"Donations Euro."*
+
+<li>Open donation page;
+
+"https://www.monkkee.com/en/support-us-with-a-donation/"
+<li>Check title donation;
+<li>Logo euro should have text "€";
+<li>Input 5 euro;
+<li>Check logo paypal;
+
+*"Donations input validation comment."*
+<li>Open donation page;
+
+"https://www.monkkee.com/en/support-us-with-a-donation/"
+<li>Check title donation;
+<li>Logo euro should have text "€";
+<li>Input valid random name;
+<li>Input valid random email;
+<li>Create random comment;
+<li>Submit form;
+<li>Check title donation;
+
+*"Donations input invalid email and send comment."*
+<li>Open donation page;
+
+"https://www.monkkee.com/en/support-us-with-a-donation/"
+<li>Check title donation;
+<li>Logo euro should have text "€";
+<li>Input valid random name;
+<li>Input invalid email;
+<li>Create random comment;
+<li>Submit form;
+<li>Check error message about invalid email;
+
+
+*"Donations input invalid name and email and send comment."*
+<li>Open donation page;
+
+"https://www.monkkee.com/en/support-us-with-a-donation/"
+<li>Check title donation;
+<li>Logo euro should have text "€";
+<li>Input valid random name;
+<li>Input invalid email;
+<li>Create random comment;
+<li>Submit form;
+<li>Check error message about invalid name and email;
+
+_____________________________________________
+
+<h1>Registration page:</h1>
+*"Send variable data."*
+<li>Open registration page;
+
+"https://my.monkkee.com/account/registration"
+<li>Check title registration;
+<li>Input random variable Email;
+<li>Input random variable password;
+<li>Input random variable confirm password;
+<li>Input password hint;
+<li>Check password message;
+<li>Click on recover password;
+<li>Click on privat policy;
+<li>Submit form;
+
+*"Input invalid password."*
+<li>Open registration page;
+"https://my.monkkee.com/account/registration"
+<li>Check title registration;
+<li>Input random variable Email;
+<li>Input invalid password;
+<li>Input invalid confirm password
+<li>Check error message;
+
+*"Input different password."*
+<li>Open registration page;
+
+"https://my.monkkee.com/account/registration"
+<li>Check title registration;
+<li>Input random variable Email;
+<li>Input variable password;
+<li>Input different confirm password;
+<li>Click on button privat policy;
+<li>Click on button recover password;
+<li>Submit form;
+<li>Check error message;
+
+_____________________________________________
+
+<h1>Tags Page:</h1>
+<li>Login;
+<li>Click on button manager tags;
+<li>Check title tags;
+<li>Click on button edit tags;
+<li>Check title edit tags;
+<li>Clear tag name;
+<li>Input random tag name;
+<li>Click on button submit;
+_____________________________________________
 

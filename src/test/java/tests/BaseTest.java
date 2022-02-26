@@ -24,7 +24,6 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 @Log4j2
 public class BaseTest {
 
-    WebDriver driver;
     LoginPage loginPage;
     EntriesPage entriesPage;
     EntriesNewDataPage entriesNewDataPage;
@@ -38,6 +37,7 @@ public class BaseTest {
     TagsModalPage tagsModalPage;
     DonationPage donationPage;
     AuthorModalPage authorModalPage;
+    ContactPage contactPage;
     @Parameters
     @BeforeClass
     public void setUp(@Optional("chrome") String browser) {
@@ -46,15 +46,20 @@ public class BaseTest {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
-            driver = new ChromeDriver(options);
+            Configuration.browserPosition = "0x0";
+            options.addArguments("--disable-notifications");
         } else if ( browser.equals("firefox")){
             WebDriverManager.firefoxdriver().setup();
             FirefoxOptions options = new FirefoxOptions();
+            Configuration.browserPosition = "0x0";
             options.addArguments("--start-maximized");
+            options.addArguments("--disable-notifications");
         } else if (browser.equals("edge")){
             WebDriverManager.edgedriver().setup();
             EdgeOptions options = new EdgeOptions();
             options.addArguments("--start-maximized");
+            Configuration.browserPosition = "0x0";
+            options.addArguments("--disable-notifications");
         }
 
         loginPage = new LoginPage();
@@ -67,16 +72,12 @@ public class BaseTest {
         authorModalPage = new AuthorModalPage();
         tagsModalPage = new TagsModalPage();
         donationPage = new DonationPage();
+        contactPage = new ContactPage();
         tagsPage = new TagsPage();
         homePage = new HomePage();
         blogPage = new BlogPage();
         Configuration.savePageSource = false;
         Configuration.timeout = 10000;
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-notifications");
-        options.addArguments("start-maximized");
-        Configuration.browserSize = "1920x1080";
-        Configuration.browserPosition = "0x0";
 
 
     }

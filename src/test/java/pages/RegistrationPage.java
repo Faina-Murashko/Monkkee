@@ -11,7 +11,6 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 public class RegistrationPage extends BasePage{
     public static final By TITLE_REGISTRATION = By.xpath("//div[@class='content-container']/h1[text()='Registration']");
-//    public static final By INPUT_EMAIL = By.xpath("//input[@id='registration_email']");
     public static final By INPUT_PASSWORD = By.xpath("//input[@id='registration_password']");
     public static final By INPUT_CONFIRM_PASSWORD = By.xpath("//input[@id='registration_password_confirmation']");
     public static final By INPUT_PASSWORD_HINT = By.xpath("//input[@id='registration_password_hint']");
